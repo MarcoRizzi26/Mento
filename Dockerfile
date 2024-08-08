@@ -2,7 +2,7 @@
 FROM python:3.11
 
 # Define o diretório de trabalho dentro do container
-WORKDIR /app
+WORKDIR /src/backend/api
 
 # Copie o arquivo requirements.txt para o diretório de trabalho
 COPY src/backend/api/requirements.txt .
