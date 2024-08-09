@@ -1,1 +1,8 @@
+# ambiente virtual
 src/backend/venv/
+
+# pastas pycache
+src/backend/__pycache__/
+src/backend/api/__pycache__/
+src/backend/api/routes/__pycache__/
+src/backend/api/classes/__pycache__/
