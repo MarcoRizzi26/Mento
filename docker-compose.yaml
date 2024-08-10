@@ -1,0 +1,18 @@
+version: "3.8"  # Defina a versão do docker-compose
+
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src/backend:/src/backend  # Mapeia o diretório local para o contêiner
+    working_dir: /src/backend  # Define o diretório de trabalho no contêiner
+    command: uvicorn main:app --host 0.0.0.0 --port 3000 --reload  # Comando para iniciar a aplicação
+    depends_on:
+      - mongo_db
+
+  mongo_db:
+    image: mongo
+    ports:
+      - "27017:27017"
